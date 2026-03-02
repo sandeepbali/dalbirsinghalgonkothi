@@ -64,6 +64,18 @@ body.pa {
   font-family: var(--font-pa);
 }
 
+/* ── Punjabi hero: prevent Gurmukhi ascenders from being clipped ── */
+body.pa .hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.15;
+}
+
+body.pa .hero h1 .line {
+  padding-top: 0.15em;
+  /* room for Gurmukhi top stroke (ਸਿਰਮੁਣੀ) */
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
